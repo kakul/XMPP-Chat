@@ -404,7 +404,7 @@ $(document).ready(function(){
 });
 
 $(document).bind('connect',function(ev,data){
-	var conn = new Strophe.Connection('http://ematrimony.co:5280/http-bind');
+	var conn = new Strophe.Connection('http://localhost:5280/http-bind');
 	conn.connect(data.jid,data.password,function(status){
 		if(status === Strophe.Status.CONNECTED){
 			$(document).trigger('connected');
